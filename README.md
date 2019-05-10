@@ -1,6 +1,8 @@
 # basic-sentiment-analysis
 Basic Sentiment Analysis Project
 
+to run, use python.py file.
+
 sentimentanalysis(s,t,u) takes in a txt file 's'. 
 It processes the file, cleans it up,
 breaks it into sentences line by line, then into words to compare to the other 
