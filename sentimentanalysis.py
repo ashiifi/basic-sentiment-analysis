@@ -1,8 +1,8 @@
 """
 Basic Sentiment Analysis Project.
-sentimentanalysis(s,t,u) takes in a txt file 's'. 
+sentimentanalysis(s,t,u) takes in a txt file 's'.
 It processes the file, cleans it up,
-breaks it into sentences line by line, then into words to compare to the other 
+breaks it into sentences line by line, then into words to compare to the other
 two files, 't' which is the positive words file, and 'u' which is the negative words file.
 Then prints out how many times a Postive, Negative, and Neutral word was in the txt.
 Neutral in this case is just any words that aren't in the pos or neg files.
@@ -25,12 +25,12 @@ def sentimentanalysis(s,t,u):
 		text = text.replace("?",".")
 		text = text.replace("!",".")
 		text = text.replace(",","")
-		sentences = text.split(".") 
+		sentences = text.split(".")
 
 	Negative = 0
 	Positive = 0
 	Neutral = 0
-	
+
 	for sent in sentences:
 		words = set(sent.split(" "))
 		negativecnt = len(words.intersection(N))
@@ -42,12 +42,11 @@ def sentimentanalysis(s,t,u):
 		else:
 			Neutral += 1
 
-	print("Positive:", Positive)
-	print("Negative:", Negative)
-	print("Neutral :", Neutral)
+	print("Positive:", Positive) #prints the number of positive words
+	print("Negative:", Negative) #prints the number of negative words
+	print("Neutral :", Neutral) #prints the number of neutral words
 
 def main():
 	sentimentanalysis("thehoundofthebaskervilles.txt","positivesentimentwords.txt","negativesentimentwords.txt")
 
 main()
-
