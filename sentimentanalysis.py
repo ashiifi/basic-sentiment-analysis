@@ -1,5 +1,5 @@
 """
-Basic Sentiment Analysis Project.
+Basic Sentiment Analysis program.
 sentimentanalysis(s,t,u) takes in a txt file as 's'
 takes in the positive words file as 't'
 takes in the negative words file as 'u'
